@@ -1,25 +1,13 @@
 package com.example.todolist.Service;
 
 import com.example.todolist.Entity.Member;
-import com.example.todolist.Repsitory.MemberRepository;
 
-import java.util.HashMap;
-import java.util.Map;
+public interface MemberService {
 
-public class MemberService implements MemberRepository {
+    //회원가입 , join은 내장된 메소드
+    void join (Member member);
 
-    //Member 저장은 Hash 자료구조를 이용
-    public static Map<Long,Member> store = new HashMap<>();
-
-
-    @Override
-    public void save(Member member) {
-        //key 값은
-        store.put(member.getIndex(),member);
-    }
-
-    @Override
-    public Member findById(Long memberId) {
-        return store.get(memberId);
-    }
+    //회원조회 MemberIndex를 받으면 찾은 Member 로 retrun
+    Member findMember(Long memberIndex);
 }
+

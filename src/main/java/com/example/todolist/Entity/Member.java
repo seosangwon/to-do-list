@@ -23,6 +23,14 @@ public class Member {
     //회원가입 비밀번호
     private String password;
 
+//생성자
+    public Member(Long index, String name, String identifier, String password) {
+        this.index = index;
+        this.name = name;
+        this.identifier = identifier;
+        this.password = password;
+    }
+
 
 
 
