@@ -8,21 +8,61 @@ import jakarta.persistence.Id;
 @jakarta.persistence.Entity
 public class Member {
 
-    @Id // PK 주입
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // PK생성을 DB에게 위임
+
+
+
     //ID선언 Long이냐 Integer냐 -> 대부분  Entity에서는 Long
-    private Long Id;
+    private Long index;
+
     //회원 이름
     private String name;
-    // list 제목
-    private String title;
 
-    // list 컨텐츠
-    private String content;
+    //회원가입 아이디
+    private String identifier;
 
-    //file 첨부
-    private String filename;
+    //회원가입 비밀번호
+    private String password;
+
+
+
+
+    public Long getId() {
+        return index;
+    }
+
+    public void setId(Long index) {
+        this.index = index;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getIdName() {
+        return identifier;
+    }
+
+    public void setIdName(String identifier) {
+        this.identifier = identifier;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+
+
+
 
 
 
 }
+
