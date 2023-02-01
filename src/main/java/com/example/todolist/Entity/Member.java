@@ -26,7 +26,7 @@ public class Member {
 
 
 
-    public Long getId() {
+    public Long getIndex() {
         return index;
     }
 

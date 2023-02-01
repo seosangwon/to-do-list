@@ -14,7 +14,8 @@ public class MemberService implements MemberRepository {
 
     @Override
     public void save(Member member) {
-        store.put(member.getId(),member);
+        //key 값은
+        store.put(member.getIndex(),member);
     }
 
     @Override
