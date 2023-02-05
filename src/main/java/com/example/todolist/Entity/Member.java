@@ -8,11 +8,8 @@ import jakarta.persistence.Id;
 @jakarta.persistence.Entity
 public class Member {
 
-
-
-
     //ID선언 Long이냐 Integer냐 -> 대부분  Entity에서는 Long
-    private Long index;
+    private Long MemberNumber;
 
     //회원 이름
     private String name;
@@ -24,8 +21,8 @@ public class Member {
     private String password;
 
 //생성자
-    public Member(Long index, String name, String identifier, String password) {
-        this.index = index;
+    public Member(Long MemberNumber, String name, String identifier, String password) {
+        this.MemberNumber = MemberNumber;
         this.name = name;
         this.identifier = identifier;
         this.password = password;
@@ -35,11 +32,11 @@ public class Member {
 
 
     public Long getIndex() {
-        return index;
+        return MemberNumber;
     }
 
-    public void setId(Long index) {
-        this.index = index;
+    public void setId(Long MemberNumber) {
+        this.MemberNumber = MemberNumber;
     }
 
     public String getName() {
@@ -65,7 +62,6 @@ public class Member {
     public void setPassword(String password) {
         this.password = password;
     }
-
 
 
 
