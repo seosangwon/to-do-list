@@ -9,6 +9,8 @@ import jakarta.persistence.Id;
 public class Member {
 
     //ID선언 Long이냐 Integer냐 -> 대부분  Entity에서는 Long
+
+    @Id
     private Long MemberNumber;
 
     //회원 이름
