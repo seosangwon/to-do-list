@@ -2,8 +2,9 @@ package com.example.todolist.Service;
 
 import com.example.todolist.Entity.Member;
 import com.example.todolist.Repsitory.MemberRepository;
+import com.example.todolist.dao.MemberService;
 
-public class MemberServiceImpl implements MemberService{
+public class MemberServiceImpl implements MemberService {
 
     //어떤 MemberRepository를 사용 할 것인지 아직 안정하고 선언만
     private MemberRepository memberRepository;

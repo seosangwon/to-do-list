@@ -1,4 +1,4 @@
-package com.example.todolist.Service;
+package com.example.todolist.dao;
 
 import com.example.todolist.Entity.Member;
 

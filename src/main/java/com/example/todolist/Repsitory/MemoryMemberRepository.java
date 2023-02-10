@@ -11,7 +11,6 @@ public class MemoryMemberRepository implements MemberRepository {
     //Member 저장은 Hash 자료구조를 이용
     public static Map<Long,Member> store = new HashMap<>();
 
-
     @Override
     public void save(Member member) {
         //key 값은
