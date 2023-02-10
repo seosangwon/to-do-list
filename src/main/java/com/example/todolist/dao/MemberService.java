@@ -1,6 +1,6 @@
 package com.example.todolist.dao;
 
-import com.example.todolist.Entity.Member;
+import com.example.todolist.Model.Member;
 
 public interface MemberService {
 

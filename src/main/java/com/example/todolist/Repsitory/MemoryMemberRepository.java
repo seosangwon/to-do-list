@@ -1,7 +1,6 @@
 package com.example.todolist.Repsitory;
 
-import com.example.todolist.Entity.Member;
-import com.example.todolist.Repsitory.MemberRepository;
+import com.example.todolist.Model.Member;
 
 import java.util.HashMap;
 import java.util.Map;

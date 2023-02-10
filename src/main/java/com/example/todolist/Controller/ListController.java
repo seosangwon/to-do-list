@@ -4,7 +4,9 @@ import com.example.todolist.Repsitory.MemoryMemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequiredArgsConstructor
@@ -17,8 +19,8 @@ public class ListController {
 
     //list url 받을 시 list 리소스 return
     //DB에서 list를 받아서 페이지에 모으는 작업 필요
-    @GetMapping("/to_do_list/list")
-    public String to_do_list_List(){
+    @GetMapping("/list")
+    public String showList(Model model , @RequestParam(name = "loginId")){
         return "list";
     }
 
