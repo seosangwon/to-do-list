@@ -6,5 +6,5 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class SessionController {
     @GetMapping("/")
-    public String home(){ return "redirect:/class"; }
+    public String home(){ return "redirect:/login"; }
 }
