@@ -1,5 +1,211 @@
-{{>layout/header}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <!-- font link need -->
 
-<h1>투두리스트 보여주는 페이지 칸입니다</h1>
+    <link href="list.css" rel="stylesheet" />
+    <script src="list.js" defer></script>
+    <style>
+            * { margin : 0; 
+                padding: 0;
+                box-sizing: border-box;
+            }
+            html, body {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+                z-index: -3;
+            }
+            .glass {
+                width: 90%;
+                flex-direction: column;
+                background-image: linear-gradient(120deg, #59d5eb 0%, #e19ae7 100%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                opacity: 0.8;
+                border-radius: 8px;
+                z-index: -2;
+            }
+            .flex-container {
+                width: 100%;
+                display: inline-flex;
+            }
+            
+            
 
-{{>layout/footer}}
+            /* Header */
+            header {
+                width: 100%;
+                height: 50px;
+                border : 1px solid black;
+                text-align: center;
+            }
+            header button{
+                float: left;
+                margin: 7px;
+                width: 30px;
+                height: 30px;
+            }
+
+            
+
+            /* Navigation */
+            nav {
+                margin: 5px;
+                width: 10%;
+                border: 1px solid black;
+                display: flex;
+            }
+
+
+            /* Input, Calender section */
+            .main-section {
+                width: 80%;
+                border : 1px solid rgb(255, 0, 221);
+                display: flex;
+            }
+            section .calendar {
+                width: 100%;
+                height: 200px;
+                border: 1px solid black;
+            }
+            .input-section {
+                margin: 10px;
+                width: 100%;
+                height: 200px;
+                border: 1px solid black;
+            }
+                     /* Input-Form */
+            #input_form input {
+                all: unset;
+                width: 70%;
+                height: 2.5em;
+                border: solid 2px #dbe3e6;
+                border-radius: 10px;
+                cursor: pointer;
+                text-align: left;
+                padding-left: 1em;
+            }
+            #input_form button {
+                width: 5em;
+                height: 2.5em;
+                font-size: 1em;
+                background-color: transparent;
+                border: solid 2px #dbe3e6;
+                border-radius: 20px;
+                box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+                    0 15px 40px rgba(166, 173, 201, 0.2);
+                cursor: pointer;
+            }
+            #input_form input:focus,
+            #input_form input:hover,
+            #input_form button:hover {
+                border: solid 2px #6a476b;
+            }
+
+            section .input-box {
+                width: 100%;
+                height: 10%;
+                text-align: center;
+            }
+            
+            .item_list {
+                width: 80%;
+                height: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .item_list ul li {
+                width: 100%;
+                height: 20px;
+                min-width: 40%;
+                background-color: transparent;
+                border-radius: 5px;
+                margin: 0.5em 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 0.5em;
+            }
+            .item_list ul li.checked {
+                background: rgb(117, 238, 147);
+                color: #272341;
+                text-decoration: line-through;
+            }
+
+            /* Aside */
+            aside {
+                width: 10%;
+                border : 1px solid rgb(179, 23, 23);
+                display: flex;
+            }
+            
+            .main-box {
+                display: flex;
+                flex-direction: row;
+            }
+            
+        </style>
+</head>
+
+<body>
+<main class="glass">
+    <header>
+        <button id="menu-btn">메</button> <!-- menu -->
+        <button id="home-btn">홈</button> <!-- home -->
+        <button id="option-btn">옵</button> <!-- option -->
+        <h1>To Do List</h1>
+    </header>
+
+    <div class="flex-container">
+        <nav>
+            <ul>년</ul>
+            <ul>달</ul>
+        </nav>
+
+        <section class="main-section"> <!-- main -->
+            <div class="calendar"> <!-- calendar -->
+                <span>달력 ~</span>
+            </div>
+            <div class="input-section">
+                <span id="selected-day">사용자가 누른 날짜 (default:today)</span>
+                <div class="input_box"> <!-- add todolist -->
+                    <form id="input_form">
+                        <input type="text" class="item" autofocus="true">
+                        <button type="button" class="input_button">Add</button>
+                    </form>
+                </div>
+                <div class="item_list"></div>
+            </div>
+        </section>
+
+        <aside>
+            <div class="hashtag">
+                <h3>해시 태그</h3>
+            </div>
+            <div class="status">
+                <h3>속성</h3>
+            </div>
+        </aside>
+    </div>
+
+
+
+</main>
+
+<footer>
+
+</footer>
+
+</body>
+</html>
