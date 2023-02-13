@@ -1,6 +1,6 @@
 package com.example.todolist.Repsitory;
 
-import com.example.todolist.Model.Member;
+import com.example.todolist.domain.Member;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,12 +12,14 @@ public class MemoryMemberRepository implements MemberRepository {
 
     @Override
     public void save(Member member) {
-        //key 값은
-        store.put(member.getIndex(),member);
+        //PK 값
+        store.put(member.getMemberNumber(),member);
     }
 
+    //pk : memberNumber에 따른 멤버ID찾기
     @Override
-    public Member findById(Long memberIndex) {
-        return store.get(memberIndex);
+    public Member findById(Long memberNumber) {
+
+        return store.get(memberNumber);
     }
 }

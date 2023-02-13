@@ -1,6 +1,6 @@
 package com.example.todolist.Service;
 
-import com.example.todolist.Model.Member;
+import com.example.todolist.domain.Member;
 import com.example.todolist.dao.LoginRepo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

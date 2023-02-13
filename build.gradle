@@ -26,7 +26,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	//mySql
 	implementation 'mysql:mysql-connector-java'
-	//test
+    implementation 'org.projectlombok:lombok:1.18.22'
+    //test
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
