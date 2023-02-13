@@ -1,6 +1,6 @@
 package com.example.todolist.dao;
 
-import com.example.todolist.Model.Member;
+import com.example.todolist.domain.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

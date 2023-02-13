@@ -15,7 +15,6 @@ import lombok.ToString;
 public class Member {
 
     //ID선언 Long이냐 Integer냐 -> 대부분  Entity에서는 Long
-    //pk임
     @Id
     @Column(nullable = false)
     private Long MemberNumber;
@@ -26,13 +25,13 @@ public class Member {
 
     @Column(nullable = false)
     //회원가입 아이디
-    private String id;
+    private String identifier;
 
     @Column(nullable = false)
     //회원가입 비밀번호
     private String password;
 
-    public Member(String id){this.id = id;}
+    public Member(String id){this.id = id};
 
 }
 
