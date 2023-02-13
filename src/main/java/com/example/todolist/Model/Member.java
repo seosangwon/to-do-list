@@ -9,7 +9,7 @@ import lombok.ToString;
 
 @Entity
 @Getter
-@ToString(exclude = "registerEntitySet")
+@ToString(exclude = "")
 @NoArgsConstructor // 파라미터 없는 생성자 자동생성
 @AllArgsConstructor //모든 파라미터 가진 생성자 자동생성
 public class Member {
@@ -34,6 +34,7 @@ public class Member {
         this.id = id;
         this.password = password;
     }
+    public Member(Long memberNumber){this.MemberNumber = memberNumber;}
     /**
      *  회원 정보 수정
      */

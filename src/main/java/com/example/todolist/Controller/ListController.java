@@ -25,7 +25,7 @@ public class ListController {
         if(member != null){
             //리스트를 보여줍니다.
 
-            return "list/todoList";
+            return "todoList/todoList";
         }else{
             return "redirect:/login";
         }

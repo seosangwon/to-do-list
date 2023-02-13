@@ -10,4 +10,5 @@ import java.util.Optional;
 @Repository
 public interface LoginRepo extends JpaRepository<Member, String> {
     Optional<Member> findById(String id);
+    Optional<Member> findById(Long MemberNumber);
 }
