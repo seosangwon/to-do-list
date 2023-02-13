@@ -1,0 +1,68 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    font-size: 11px;
+}
+html {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+body {
+    width: 40%;
+    border: 1px solid black;
+}
+input{
+    border: 1px solid black;
+    border-radius: 3px;
+    line-height: 35px;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.wrapper {
+    padding: 20px;
+}
+
+div {
+    padding-top: 10x;
+    padding-bottom: 10px;
+}
+
+.title {
+    text-align: center;
+    font-weight: 700;
+}
+.nickname{
+    position:relative
+}
+.nickname input {
+    width: 100%;
+}
+.nickname button{
+    top:18px;
+    right:5px;
+    position: absolute;
+}
+
+.name input {
+    width: 100%;
+}
+
+.password input {
+    width: 100%;
+}
+
+.passwordCheck input {
+    width: 100%;
+}
+.signUp button {
+    width: 100%;
+    cursor:pointer;
+}
+button{
+    cursor: pointer;
+    height: 30px;
+}
