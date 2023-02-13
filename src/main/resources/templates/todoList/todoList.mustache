@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <!-- font link need -->
+
+    <link href="/css/todoList.css" rel="stylesheet" />
+    <script src="/js/todoList.js" defer />
+</head>
+
+<body>
+<main class="glass">
+    <header>
+        <button id="menu-btn">메</button> <!-- menu -->
+        <button id="home-btn">홈</button> <!-- home -->
+        <button id="option-btn">옵</button> <!-- option -->
+        <h1>To Do List</h1>
+        {{#user}}
+            <div class="top-nav">
+                <p>{{name}} 님 환영합니다. &nbsp;&nbsp;&nbsp;</p>
+                <div>
+                    <a href="">마이페이지</a>
+                    <a href="">로그아웃</a>
+                </div>
+            </div>
+
+        {{/user}}
+        {{^user}}
+            <div class="top-nav">
+                <a href="../login/login.mustache">로그인</a>
+            </div>
+        {{/user}}
+
+    </header>
+
+    <div class="flex-container">
+        <nav>
+            <ul>년</ul>
+            <ul>달</ul>
+        </nav>
+
+        <section class="main-section"> <!-- main -->
+            <div class="calendar"> <!-- calendar -->
+                <span>달력 ~</span>
+            </div>
+            <div class="input-section">
+                <span id="selected-day">사용자가 누른 날짜 (default:today)</span>
+                <div class="input_box"> <!-- add todolist -->
+                    <form id="input_form">
+                        <input type="text" class="item" autofocus="true">
+                        <button type="button" class="input_button">Add</button>
+                    </form>
+                </div>
+                <div class="item_list"></div>
+            </div>
+        </section>
+
+        <aside>
+            <div class="hashtag">
+                <h3>해시 태그</h3>
+            </div>
+            <div class="status">
+                <h3>속성</h3>
+            </div>
+        </aside>
+    </div>
+
+
+
+</main>
+
+{{>layout/footer}}
+
+</body>
+</html>
