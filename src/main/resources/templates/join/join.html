@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <title>회원가입</title>
     <link href="join.css" rel="stylesheet" />
-    <script src = "/join.js" defer></script>
+    <script src = "join.js" defer></script>
 </head>
 <body>
 <div class="wrapper">
-    <div class="title"><h1 style="font-size: 21px;">회원가입</h1></div>
+    <form>
+    <div class="title"><h1>회원가입</h1></div>
     <div class="nickname">
         <p>닉네임</p>
         <input id="nickname" type="text" placeholder="닉네임을 입력하세요.">
@@ -34,8 +35,9 @@
         <hr>
     </div>
     <div class="signUp">
-        <button id="signUpButton" disabled onclick="signUpCheck()">가입하기</button>
+        <button id="signUpButton" disabled onclick="signUpCheck()" type="submit">가입하기</button>
     </div>
+    </form>
 </div>
 
 </body>
