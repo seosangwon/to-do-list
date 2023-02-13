@@ -3,11 +3,9 @@ package com.example.todolist.Controller;
 import com.example.todolist.Model.Member;
 import com.example.todolist.Repsitory.MemoryMemberRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
 @Controller
@@ -25,6 +23,7 @@ public class ListController {
     public String showList(Model model ,
                            @SessionAttribute(name = "loginId") Member member){
         if(member != null){
+            //리스트를 보여줍니다.
 
             return "list/todoList";
         }else{

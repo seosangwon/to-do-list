@@ -1,6 +1,6 @@
 package com.example.todolist.Repsitory;
 
-import com.example.todolist.domain.Member;
+import com.example.todolist.Model.Member;
 
 public interface MemberRepository {
 

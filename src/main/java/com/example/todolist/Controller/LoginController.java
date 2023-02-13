@@ -1,6 +1,6 @@
 package com.example.todolist.Controller;
 
-import com.example.todolist.domain.Member;
+import com.example.todolist.Model.Member;
 import com.example.todolist.Service.LoginService;
 import com.example.todolist.dto.LoginForm;
 import jakarta.servlet.http.HttpServletRequest;
