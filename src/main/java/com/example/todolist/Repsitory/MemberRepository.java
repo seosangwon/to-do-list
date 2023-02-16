@@ -1,6 +1,7 @@
+/**
 package com.example.todolist.Repsitory;
 
-import com.example.todolist.Model.Member;
+import com.example.todolist.Domain.Member;
 
 public interface MemberRepository {
 
@@ -10,3 +11,4 @@ public interface MemberRepository {
     //Index (PK)를 이용하여 member를 찾는다.
     Member findById(Long memberNumber);
 }
+**/

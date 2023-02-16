@@ -1,6 +1,7 @@
+/**
 package com.example.todolist.Service;
 
-import com.example.todolist.Model.Member;
+import com.example.todolist.Domain.Member;
 import com.example.todolist.Repsitory.MemberRepository;
 import com.example.todolist.dao.MemberService;
 
@@ -21,3 +22,4 @@ public class MemberServiceImpl implements MemberService {
         return memberRepository.findById(memberIndex);
     }
 }
+**/

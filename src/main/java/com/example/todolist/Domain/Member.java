@@ -1,4 +1,4 @@
-package com.example.todolist.Model;
+package com.example.todolist.Domain;
 
 
 import jakarta.persistence.*;
@@ -9,7 +9,7 @@ import lombok.ToString;
 
 @Entity
 @Getter
-@ToString(exclude = "")
+//@ToString(exclude = "")
 @NoArgsConstructor // 파라미터 없는 생성자 자동생성
 @AllArgsConstructor //모든 파라미터 가진 생성자 자동생성
 public class Member {
