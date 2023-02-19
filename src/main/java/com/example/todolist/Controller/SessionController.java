@@ -9,21 +9,30 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
-@RestController
+@Controller
 public class SessionController {
 
     @Autowired
     private PostsService postsService;
 
 
-    @GetMapping("/login")
-    public String listPage(){
-        return "login";
+    @GetMapping("/")
+    public String toDoListPage(){
+
+        return "/todoList/todoList";
     }
 
-    @GetMapping("/login/write")
-    public String writePage(){
-        return"write";
+    @GetMapping("/join")
+    public String joinPage(){
+        return"join/join";
+    }
+
+
+
+
+    @GetMapping("/login")
+    public String loginPage(){
+        return"login/login";
     }
 
 

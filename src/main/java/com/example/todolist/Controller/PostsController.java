@@ -8,12 +8,12 @@ import com.example.todolist.dto.PostsSaveRequestDto;
 import com.example.todolist.dto.PostsUpdateRequestDto;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor// private final 생성자 자동 생성
-@Getter
 public class PostsController {
 
     private final PostsService postsService;
