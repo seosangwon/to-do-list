@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
-@RestController
+@Controller
 public class SessionController {
 
     @Autowired
@@ -26,6 +26,10 @@ public class SessionController {
         return"write";
     }
 
+    @GetMapping("/")
+    public String toDolist(){
+        return "todoList/todoList";
+    }
 
     /**
        @GetMapping("/")

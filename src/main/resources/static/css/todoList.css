@@ -2,49 +2,65 @@
     padding: 0;
     box-sizing: border-box;
 }
+.clearfix::after{
+    content: ' ';
+    display: block;
+    clear: both;
+}
+
+li {
+    list-style: none;
+}
+
 html, body {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-    z-index: -3;
-}
-.glass {
-    width: 90%;
-    flex-direction: column;
-    background-image: linear-gradient(120deg, #59d5eb 0%, #e19ae7 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    opacity: 0.8;
-    border-radius: 8px;
-    z-index: -2;
-}
-.flex-container {
     width: 100%;
-    display: inline-flex;
+    height: 100%;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
 
+/* body setting */
+.glass {
+    width: 95%;
+    height: auto;
+    background-image: linear-gradient(120deg, #59d5eb 0%, #e19ae7 100%);
+    opacity: 0.7;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
 
+.flex-container {
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    border: 5px solid black;
+    border-radius: 10px;
+    margin: 5px auto;
+    padding: 15px;
+    justify-content: space-between;
+}
 
 /* Header */
-header {
-    width: 100%;
+.header {
+    width: 95%;
     height: 50px;
-    border : 1px solid black;
+    margin: 5px auto;
+    position: relative;
     text-align: center;
+    border-radius: 10px;
+    border: 1px solid black;
 }
-header button{
+.header button{
     float: left;
     margin: 7px;
     width: 30px;
     height: 30px;
 }
-header .top-nav {
+.header .top-nav {
     position: relative;
     float: right;
     display: inline-flex;
@@ -55,30 +71,34 @@ header .top-nav {
 
 
 /* Navigation */
-nav {
-    margin: 5px;
+.nav {
     width: 10%;
-    border: 1px solid black;
-    display: flex;
+    border: 3px solid green;
+    border-radius: 5px;
 }
 
 
 /* Input, Calender section */
 .main-section {
-    width: 80%;
-    border : 1px solid rgb(255, 0, 221);
+    width: 75%;
+    border: 3px solid green;
+    border-radius: 5px;
     display: flex;
+    flex-direction: column;
+    margin: auto;
 }
-section .calendar {
-    width: 100%;
-    height: 200px;
+.main-section .calendar {
+    width: 95%;
+    height: auto;
+    margin: 15px auto;
     border: 1px solid black;
 }
-.input-section {
-    margin: 10px;
-    width: 100%;
+.main-section .input-section {
+    width: 95%;
     height: 200px;
+    margin: 15px auto;
     border: 1px solid black;
+    float: left;
 }
          /* Input-Form */
 #input_form input {
@@ -141,13 +161,102 @@ section .input-box {
 }
 
 /* Aside */
-aside {
+.aside {
     width: 10%;
-    border : 1px solid rgb(179, 23, 23);
-    display: flex;
+    border: 3px solid green;
+    border-radius: 5px;
 }
 
-.main-box {
-    display: flex;
-    flex-direction: row;
+
+
+
+
+
+
+
+
+.main{
+    background: rgb(238,126,195);
+    background: linear-gradient(74deg, rgba(238,126,195,1) 9%, rgba(149,175,213,0.981127485173757) 100%);
+    width: 840px;
+    margin: 30px auto 0;
+    padding: 20px 0px 20px 25px;
+    border-radius: 10px;
 }
+
+.main .main-title{
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+.main .day{
+    width: 100%;
+    margin: 5px auto;
+
+}
+
+.main .day li {
+    float: left;
+    background: white;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    margin-right: 14px;
+    margin-top: 10px;
+}
+
+.main .day li:last-child{
+    margin-right: 0;
+}
+
+.main .day li:hover{
+    cursor: pointer;
+    transition: all .2s;
+    transform: scale(1.08);
+}
+
+.month{
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    margin-left: -25px;
+    margin-bottom: 15px;
+    padding: 8px;
+}
+
+.month .fas{
+    font-size: 30px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.month .fas:hover{
+    transition: all .2s ease-in-out;
+    transform: scale(1.2);
+}
+
+.month .fa-chevron-left{
+    float: left;
+    margin-left: 15px;
+}
+
+.month .fa-chevron-right{
+    float: right;
+    margin-right: 15px;
+}
+
+.dayCount .dayCount-list li{
+    float: left;
+    width: 114px;
+    color: #fff;
+}
+
+.sun,.sat{
+    color: red;
+}
+
+.none{
+    display: none;
+}
+
