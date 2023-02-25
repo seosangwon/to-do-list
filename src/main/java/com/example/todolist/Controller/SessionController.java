@@ -35,6 +35,10 @@ public class SessionController {
         return"login/login";
     }
 
+    @GetMapping("/")
+    public String toDolist(){
+        return "todoList/todoList";
+    }
 
     /**
        @GetMapping("/")
