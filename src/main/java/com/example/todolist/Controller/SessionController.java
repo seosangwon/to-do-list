@@ -16,14 +16,23 @@ public class SessionController {
     private PostsService postsService;
 
 
-    @GetMapping("/login")
-    public String listPage(){
-        return "login";
+    @GetMapping("/")
+    public String toDoListPage(){
+
+        return "/todoList/todoList";
     }
 
-    @GetMapping("/login/write")
-    public String writePage(){
-        return"write";
+    @GetMapping("/join")
+    public String joinPage(){
+        return"join/join";
+    }
+
+
+
+
+    @GetMapping("/login")
+    public String loginPage(){
+        return"login/login";
     }
 
     @GetMapping("/")

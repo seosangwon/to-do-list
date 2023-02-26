@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
 public interface PostsRepository  extends JpaRepository<Posts,Long> { //Post랑 PK 필요
 
    // @Query("")
