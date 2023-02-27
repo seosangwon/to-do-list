@@ -16,18 +16,18 @@ public class Posts {
     @Column(length=500, nullable = false)
     private String title;
 
-    @Column(columnDefinition = "TEXT",nullable = false)
-    private String content;
+//    @Column(columnDefinition = "TEXT")
+//    private String content;
 
     @Builder // Builder를 통하여 나중에 Set
-    public Posts(String title, String content){
+    public Posts(String title){
         this.title=title;
-        this.content=content;
+     //   this.content=content;
     }
 
-    public void update(String title, String content){
+    public void update(String title){
         this.title=title;
-        this.content=content;
+      //  this.content=content;
     }
 
 

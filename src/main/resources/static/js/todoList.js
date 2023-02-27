@@ -157,6 +157,12 @@ function main(){
     makeCalendar(year,mon,getDayOfMon(mon,year));
     todoTitle.textContent = `선택된 날짜 :  ${year}.${mon}.${currentDay}`;
     displayToDoOnDays();
+
+
+
+
+
+
 }
 
 function displayToDoOnDays(){ // 추가한 todolist 보여주는 부분
@@ -266,7 +272,16 @@ function checkItem() {
     showList();
 }
 
+function api(){
 
+
+
+
+
+}
 
 
 main();
+
+
+

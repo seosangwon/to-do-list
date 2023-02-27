@@ -1,3 +1,5 @@
+{{>layout/header}}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,7 +78,7 @@
                     <div class="input_box"> <!-- add todolist -->
                         <form id="input_form">
                             <input type="text" class="item testToDo-text" autofocus="true">
-                            <button type="button" class="input_button">Add</button>
+                            <button type="button" class="input_button" id="btn-save">Add</button>
                         </form>
                     </div>
                     <div class="item_list todoList"></div>
@@ -97,3 +99,5 @@
 <script src="/js/todoList.js" defer></script>
 
 </html>
+
+{{>layout/footer}}

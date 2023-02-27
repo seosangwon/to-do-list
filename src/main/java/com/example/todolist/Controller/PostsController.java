@@ -13,7 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequiredArgsConstructor// private final 생성자 자동 생성
+@RequiredArgsConstructor
 public class PostsController {
 
     private final PostsService postsService;
