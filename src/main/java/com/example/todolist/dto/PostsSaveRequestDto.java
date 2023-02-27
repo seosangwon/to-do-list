@@ -9,17 +9,17 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PostsSaveRequestDto {
     private String title;
-    private String content;
+//    private String content;
 
     @Builder
-    public PostsSaveRequestDto(String title, String content){
+    public PostsSaveRequestDto(String title){
         this.title=title;
-        this.content=content;
+   //     this.content=content;
     }
     public Posts toEntity(){
         return Posts.builder()
                 .title(title)
-                . content(content)
+ //               . content(content)
                 .build();
     }
 

@@ -9,13 +9,13 @@ public class PostsResponseDto {
 
      private Long id;
      private String title;
-     private String content;
+//     private String content;
 
      //Posts(Entity)에서 정보를 가져온다.(getter)
      public PostsResponseDto(Posts entity){
          this.id= entity.getId();;
          this.title=entity.getTitle();
-         this.content=entity.getContent();
+ //        this.content=entity.getContent();
      }
 
 }

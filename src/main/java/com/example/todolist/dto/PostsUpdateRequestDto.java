@@ -10,13 +10,13 @@ import lombok.NoArgsConstructor;
 public class PostsUpdateRequestDto {
 
     private String title;
-    private String content;
+//    private String content;
 
     //update된 제목과 내용의 dto
     @Builder
-    public PostsUpdateRequestDto(String title,String content){
+    public PostsUpdateRequestDto(String title){
         this.title=title;
-        this.content=content;
+ //       this.content=content;
     }
 
 }
