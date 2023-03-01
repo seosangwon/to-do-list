@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Getter
-@NoArgsConstructor
 @Entity
 public class Posts {
     @Id
@@ -19,15 +18,21 @@ public class Posts {
 //    @Column(columnDefinition = "TEXT")
 //    private String content;
 
+    private String date;
+
+    @Column
+    private Boolean completed;
+
     @Builder // Builder를 통하여 나중에 Set
-    public Posts(String title){
+    public Posts(String title, String date , Boolean completed){
         this.title=title;
-     //   this.content=content;
+        this.date=date;
+        this.completed=completed;
     }
 
-    public void update(String title){
+    public void update(String title, Boolean completed){
         this.title=title;
-      //  this.content=content;
+        this.completed = completed;
     }
 
 

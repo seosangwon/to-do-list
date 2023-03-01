@@ -32,7 +32,7 @@ public class PostsRepositoryTest {
 
        postsRepository.save(Posts.builder()
                .title(title) // title에 title 변수 저장
-               .content(content) //content는 content 변수 저장
+           //    .content(content) //content는 content 변수 저장
                .build());
        //when
         List<Posts> postList = postsRepository.findAll();
@@ -40,7 +40,7 @@ public class PostsRepositoryTest {
         //then
         Posts posts = postList.get(0); // id=0부터 저장
         Assertions.assertThat(posts.getTitle()).isEqualTo(title);
-        Assertions.assertThat(posts.getContent()).isEqualTo(content);
+   //     Assertions.assertThat(posts.getContent()).isEqualTo(content);
 
     }
 

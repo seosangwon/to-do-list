@@ -47,7 +47,7 @@ public class PostsApiControllerTest {
 
         PostsSaveRequestDto requestDto = PostsSaveRequestDto.builder()
                 .title(title)
-  //              .content(content)
+                .content(content)
                 .build();
 
         String url = "http://localhost:" + port + "/api/v1/posts";
@@ -61,7 +61,7 @@ public class PostsApiControllerTest {
 
         List<Posts> all = postsRepository.findAll();
         Assertions.assertThat(all.get(0).getTitle()).isEqualTo(title);
-  //      Assertions.assertThat(all.get(0).getContent()).isEqualTo(content);
+        Assertions.assertThat(all.get(0).getContent()).isEqualTo(content);
     }
 
     @Test
@@ -69,7 +69,7 @@ public class PostsApiControllerTest {
         //given
         Posts savedPosts = postsRepository.save(Posts.builder()
                 .title("title")
-           //     .content("content")
+              //  .content("content")
                 .build());
         Long updateId = savedPosts.getId();
         String expectedTitle="title2";
@@ -77,7 +77,7 @@ public class PostsApiControllerTest {
 
         PostsUpdateRequestDto requestDto = PostsUpdateRequestDto.builder()
                 .title(expectedTitle)
-          //      .content(expectedContent)
+                .content(expectedContent)
                 .build();
 
         String url ="http://localhost:"+port+"/api/v1/posts/"+updateId;
@@ -94,7 +94,7 @@ public class PostsApiControllerTest {
 
         List<Posts> all = postsRepository.findAll();
         Assertions.assertThat(all.get(0).getTitle()).isEqualTo(expectedTitle);
-  //      Assertions.assertThat(all.get(0).getContent()).isEqualTo(expectedContent);
+   //     Assertions.assertThat(all.get(0).getContent()).isEqualTo(expectedContent);
 
 
 
