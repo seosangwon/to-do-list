@@ -9,17 +9,23 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PostsSaveRequestDto {
     private String title;
-    private String content;
+ //   private String content;
+    private String date;
+    private Boolean completed;
 
     @Builder
-    public PostsSaveRequestDto(String title, String content){
+    public PostsSaveRequestDto(String title, String date,Boolean completed){
         this.title=title;
-        this.content=content;
+        this.date=date;
+        this.completed=completed;
+
+
     }
     public Posts toEntity(){
         return Posts.builder()
                 .title(title)
-                . content(content)
+                .date(date)
+                .completed(completed)
                 .build();
     }
 

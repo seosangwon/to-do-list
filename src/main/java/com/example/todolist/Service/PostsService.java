@@ -34,11 +34,12 @@ public class PostsService {
         Posts posts = postsRepository.findById(id).
                 orElseThrow(()->new IllegalArgumentException("해당 게시글이 없습니다. id="+id));
 
-        posts.update(requestDto.getTitle(), requestDto.getContent());
+        posts.update(requestDto.getTitle(), requestDto.getCompleted());
         return id;
     }
 
 
+    @Transactional(readOnly = true) // 조회시 읽기 전용으로
     // DB에서 꺼낸 Entity를 ResponseDto로 바꾼다.
     public PostsResponseDto findById (Long id){
         Posts entity = postsRepository.findById(id)
@@ -46,5 +47,7 @@ public class PostsService {
 
         return new PostsResponseDto(entity);
     }
+
+
 
 }

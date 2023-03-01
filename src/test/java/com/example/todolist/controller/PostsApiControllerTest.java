@@ -69,7 +69,7 @@ public class PostsApiControllerTest {
         //given
         Posts savedPosts = postsRepository.save(Posts.builder()
                 .title("title")
-                .content("content")
+              //  .content("content")
                 .build());
         Long updateId = savedPosts.getId();
         String expectedTitle="title2";
@@ -94,7 +94,7 @@ public class PostsApiControllerTest {
 
         List<Posts> all = postsRepository.findAll();
         Assertions.assertThat(all.get(0).getTitle()).isEqualTo(expectedTitle);
-        Assertions.assertThat(all.get(0).getContent()).isEqualTo(expectedContent);
+   //     Assertions.assertThat(all.get(0).getContent()).isEqualTo(expectedContent);
 
 
 
