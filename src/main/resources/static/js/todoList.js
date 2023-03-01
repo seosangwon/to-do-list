@@ -159,7 +159,7 @@ function main(){
     displayToDoOnDays();
 }
 
-function displayToDoOnDays(){ // 추가한 todolist 보여주는 부분
+function displayToDoOnDays(){ // 추가한 todolist 보여주는 부분 -> data-base 에서 데이터 가지고 와야함
     todoList.innerHTML='';
     const YMD = year+'-'+mon+'-'+DayOfChoice;
     let arrayToDo;
@@ -216,8 +216,18 @@ function addItem() {
         item : document.querySelector(".item").value,
         complete : false
     };
+
+    $.ajax({
+       type : 'POST',
+       url : '', // API 주소
+       dataType : 'json',
+       contentType : 'application/json; charset=utf-8',
+       data : JSON.stringify(itemSet)
+    }).fail(function (error) {
+        alert(JSON.stringify(error));
+    })
     
-    if(itemSet.item != null){
+    if(itemSet.item != null){ // 할 일 칸이 비어있지 않으면
         itemList.push(itemSet);
         document.querySelector(".item").value = "";
         document.querySelector(".item").focus();

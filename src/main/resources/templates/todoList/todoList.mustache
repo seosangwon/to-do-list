@@ -29,7 +29,7 @@
             {{/user}}
             {{^user}}
                 <div class="top-nav">
-                    <a href="../login/login.mustache">로그인</a>
+                    <a href="/login/login.mustache">로그인</a>
                 </div>
             {{/user}}
         </div>
@@ -79,7 +79,29 @@
                             <button type="button" class="input_button">Add</button>
                         </form>
                     </div>
-                    <div class="item_list todoList"></div>
+                    <div class="item_list todoList">
+                        <ul>
+                            {{#itemList}} <!-- 내가 누른 날짜에 해당하는 item 들이 있는 List -->
+
+                                {{#itemList.complete}}
+                                    <li class="checked">
+                                        <span class='check_button' id="{{itemList.index}}">  ✔︎</span>
+                                        {{item}}
+                                        <span class='close' id="{{itemList.index}}"> ❌ </span>
+                                    </li>
+                                {{/itemList.complete}}
+
+                                {{^itemList.complete}}
+                                    <li>
+                                        <span class='check_button' id="{{itemList.index}}">  ✔︎</span>
+                                        {{item}}
+                                        <span class='close' id="{{itemList.index}}"> ❌ </span>
+                                    </li>
+                                {{/itemList.complete}}
+
+                            {{/itemList}}
+                        </ul>
+                    </div>
                 </div>
             </div>
 
