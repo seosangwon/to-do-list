@@ -32,7 +32,7 @@ public class PostsService {
     @Transactional
     public Long update(Long id, PostsUpdateRequestDto requestDto){
         Posts posts = postsRepository.findById(id).
-                orElseThrow(()->new IllegalArgumentException("해당 게시글이 없습니다. id="+id));
+                orElseThrow(()->new IllegalArgumentException("해당 리스트가 없습니다. id="+id));
 
         posts.update(requestDto.getTitle(), requestDto.getCompleted());
         return id;
@@ -43,11 +43,18 @@ public class PostsService {
     // DB에서 꺼낸 Entity를 ResponseDto로 바꾼다.
     public PostsResponseDto findById (Long id){
         Posts entity = postsRepository.findById(id)
-                .orElseThrow(()->new IllegalArgumentException("해당 게시글이 없습니다.id="+id));
+                .orElseThrow(()->new IllegalArgumentException("해당 리스트가 없습니다.id="+id));
 
         return new PostsResponseDto(entity);
     }
 
+    @Transactional
+    public void delete(Long id){
+        Posts posts = postsRepository.findById(id)
+                .orElseThrow(()-> new IllegalArgumentException("해당 리스트가 없습니다. id= "+id));
+            postsRepository.delete(posts);
+
+    }
 
 
 }
