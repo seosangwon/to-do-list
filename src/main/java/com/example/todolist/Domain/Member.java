@@ -1,4 +1,4 @@
-package com.example.todolist.Domain;
+package com.example.todolist.domain;
 
 
 import jakarta.persistence.*;
