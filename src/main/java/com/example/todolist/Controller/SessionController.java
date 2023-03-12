@@ -1,6 +1,6 @@
 package com.example.todolist.Controller;
 
-import com.example.todolist.Domain.Member;
+import com.example.todolist.domain.Member;
 import com.example.todolist.Service.PostsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

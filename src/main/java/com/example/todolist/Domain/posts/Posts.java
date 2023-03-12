@@ -1,4 +1,4 @@
-package com.example.todolist.Domain.posts;
+package com.example.todolist.domain.posts;
 
 import jakarta.persistence.*;
 import lombok.Builder;
@@ -22,6 +22,9 @@ public class Posts {
 
     @Column
     private Boolean completed;
+
+    @Column
+    private String content;
 
     @Builder // Builder를 통하여 나중에 Set
     public Posts(String title, String date , Boolean completed){

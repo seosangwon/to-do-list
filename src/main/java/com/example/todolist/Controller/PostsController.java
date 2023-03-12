@@ -1,6 +1,6 @@
 package com.example.todolist.Controller;
 
-import com.example.todolist.Domain.Member;
+import com.example.todolist.domain.Member;
 // import com.example.todolist.Repsitory.MemoryMemberRepository; // memberRepository Null Point Exception 때문에 잠시 주석 처리
 import com.example.todolist.Service.PostsService;
 import com.example.todolist.dto.PostsResponseDto;

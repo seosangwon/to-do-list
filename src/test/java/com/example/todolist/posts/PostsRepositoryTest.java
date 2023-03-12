@@ -1,8 +1,8 @@
 package com.example.todolist.posts;
 
 
-import com.example.todolist.Domain.posts.Posts;
-import com.example.todolist.Domain.posts.PostsRepository;
+import com.example.todolist.domain.posts.Posts;
+import com.example.todolist.domain.posts.PostsRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.After;
 import org.junit.Test;
