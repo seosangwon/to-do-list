@@ -1,6 +1,6 @@
 package com.example.todolist;
 
-import com.example.todolist.Domain.Member;
+import com.example.todolist.domain.Member;
 import com.example.todolist.Service.LoginService;
 import com.example.todolist.dao.LoginRepo;
 import org.junit.jupiter.api.Test;

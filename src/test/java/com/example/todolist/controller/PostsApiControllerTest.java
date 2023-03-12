@@ -1,8 +1,8 @@
 package com.example.todolist.controller;
 
 
-import com.example.todolist.Domain.posts.Posts;
-import com.example.todolist.Domain.posts.PostsRepository;
+import com.example.todolist.domain.posts.Posts;
+import com.example.todolist.domain.posts.PostsRepository;
 import com.example.todolist.dto.PostsSaveRequestDto;
 import com.example.todolist.dto.PostsUpdateRequestDto;
 import org.assertj.core.api.Assertions;

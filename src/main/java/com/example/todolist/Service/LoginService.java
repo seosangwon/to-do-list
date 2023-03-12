@@ -1,6 +1,6 @@
 package com.example.todolist.Service;
 
-import com.example.todolist.Domain.Member;
+import com.example.todolist.domain.Member;
 import com.example.todolist.dao.LoginRepo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class LoginService {
     private final LoginRepo loginRepo;
-    //return null 이면 로그인 실패~
+    //return null 이면 로그인 실패
     public Member login(String id, String password){
 
         return loginRepo.findById(id) // db에서 로그인 정보를 가져옵니당.

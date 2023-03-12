@@ -1,6 +1,6 @@
 package com.example.todolist.dto;
 
-import com.example.todolist.Domain.posts.Posts;
+import com.example.todolist.domain.posts.Posts;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

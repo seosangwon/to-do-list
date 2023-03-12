@@ -1,6 +1,6 @@
 package com.example.todolist.dto;
 
-import com.example.todolist.Domain.posts.Posts;
+import com.example.todolist.domain.posts.Posts;
 import lombok.Getter;
 
 //DB에서 꺼낸 Entity의 값을 Dto로 바꾼다..
