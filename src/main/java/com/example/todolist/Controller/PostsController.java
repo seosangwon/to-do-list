@@ -1,16 +1,12 @@
 package com.example.todolist.Controller;
 
-import com.example.todolist.Domain.Member;
 // import com.example.todolist.Repsitory.MemoryMemberRepository; // memberRepository Null Point Exception 때문에 잠시 주석 처리
 import com.example.todolist.Service.PostsService;
 import com.example.todolist.dto.PostsResponseDto;
 import com.example.todolist.dto.PostsSaveRequestDto;
 import com.example.todolist.dto.PostsUpdateRequestDto;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+        import lombok.RequiredArgsConstructor;
+        import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor// private final 생성자 자동 생성

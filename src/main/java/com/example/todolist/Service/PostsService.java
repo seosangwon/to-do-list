@@ -1,8 +1,8 @@
 package com.example.todolist.Service;
 
 
-import com.example.todolist.Domain.posts.Posts;
-import com.example.todolist.Domain.posts.PostsRepository;
+import com.example.todolist.domain.posts.Posts;
+import com.example.todolist.domain.posts.PostsRepository;
 import com.example.todolist.dto.PostsResponseDto;
 import com.example.todolist.dto.PostsSaveRequestDto;
 import com.example.todolist.dto.PostsUpdateRequestDto;
@@ -32,7 +32,7 @@ public class PostsService {
     @Transactional
     public Long update(Long id, PostsUpdateRequestDto requestDto){
         Posts posts = postsRepository.findById(id).
-                orElseThrow(()->new IllegalArgumentException("해당 게시글이 없습니다. id="+id));
+                orElseThrow(() -> new IllegalArgumentException("해당 게시글이 없습니다. id=" + id));
 
         posts.update(requestDto.getTitle(), requestDto.getContent());
         return id;

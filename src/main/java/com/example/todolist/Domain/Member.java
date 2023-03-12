@@ -1,11 +1,10 @@
-package com.example.todolist.Domain;
+package com.example.todolist.domain;
 
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 @Entity
 @Getter
